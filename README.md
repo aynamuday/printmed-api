@@ -2,7 +2,7 @@
   <img src="assets/display.png" alt="" width="80%">
 </p> -->
 
-# PrintMed
+<!-- # PrintMed
 This is a
 
 The system uses:
@@ -16,7 +16,7 @@ The system uses:
 - fd
   
 **For Admins**
-- fd
+- fd-->
 
 
 ## Prerequisites
@@ -103,3 +103,11 @@ MAIL_PASSWORD=your_mailtrap_password
 Laravel’s built-in Mailables and Notifications system will use this configuration automatically for sending emails.
 
 To integrate production-ready email APIs, you can use providers like SendGrid and Mailgun.
+
+
+## PDF Generation
+This project uses the **Snappy PDF** package in Laravel for features requiring PDF generation (e.g., downloading audits). Snappy is a wrapper around `wkhtmltopdf`, which converts HTML to PDF.
+
+Download [wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) and install. Ensure that it is located in `C:\Program Files`.
+
+For additional details, visit the [official documentation](https://github.com/barryvdh/laravel-snappy) of Snappy PDF.

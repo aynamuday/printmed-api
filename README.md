@@ -18,12 +18,14 @@ The system uses:
 **For Admins**
 - fd
 
+
 ## Prerequisites
 
 - PHP ≥ 8.1
 - Composer
 - Node.js
 - MySQL, MySQL Workbench
+
 
 ## Backend Setup (*printmed-api*)
 
@@ -80,3 +82,24 @@ npm run dev
 ```
 Visit http://localhost:5173 to use the app.
 
+
+## Email Functionalities
+This project includes features that require email service (e.g., OTP verification, account notifications, emailing files).
+
+For development and testing, **`Mailtrap`** is used, which captures outgoing emails that can be viewed and debugged without sending real emails.
+
+To configure:
+
+**1.** Create a Mailtrap account and **get SMTP credentials**.
+
+**2.** Update your `.env` with the Mailtrap credentials:
+```bash
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=your_mailtrap_username
+MAIL_PASSWORD=your_mailtrap_password
+```
+Laravel’s built-in Mailables and Notifications system will use this configuration automatically for sending emails.
+
+To integrate production-ready email APIs, you can use providers like SendGrid and Mailgun.

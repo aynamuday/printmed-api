@@ -114,6 +114,29 @@ Download [wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) and install. Ensu
 
 For additional details, visit the [official documentation](https://github.com/barryvdh/laravel-snappy) of Snappy PDF.
 
+## Real-time Functionality
+
+This project utilizes Pusher to enable real-time updates (e.g., patient registration and vital signs).
+
+1. **Create Pusher App**
+   - Sign up to [Pusher](https://pusher.com/).
+   - Create a new Channels app, named `printmed`.
+   - Copy your credentials: ID, Key, Secret, and Cluster.
+
+2. **Configure `.env` (Laravel)**
+   ```bash
+   BROADCAST_DRIVER=pusher
+
+   PUSHER_APP_ID=your_app_id
+   PUSHER_APP_KEY=your_app_key
+   PUSHER_APP_SECRET=your_app_secret
+   PUSHER_APP_CLUSTER=your_cluster
+   ```
+3. **Configure Echo (React)**
+   - Go to `printmed\src\utils\pusher\echo.js`.
+   - Change the value of `key` to your Pusher App Key.
+
+
 ## Troubleshooting
 ### MySQL Connection Refused ###
 ```

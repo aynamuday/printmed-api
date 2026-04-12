@@ -107,6 +107,27 @@ To configure:
 To integrate production-ready email APIs, you can use providers like SendGrid and Mailgun.
 
 
+## Facial Recognition
+
+
+## QR Code Generation
+This project uses the package `simplesoftwareio/simple-qrcode` for QR Code generation. On top of it, `imagick` PHP extension needs to be enabled.
+
+Instruction:
+1. **Check your PHP setup thru terminal**
+   ```bash
+   php -v
+   ```
+   Take note of PHP version, Thread Safety, and Architecture.
+2. **Download [imagick](https://pecl.php.net/package/imagick) that matches your PHP setup**
+3. **Extract the ZIP**
+4. **Copy `php_imagick.dll` to `\php\ext\` folder**
+5. **Copy the other `.dll` files to `\php\` folder**
+6. **Enable the extension in php.ini**
+   - Open `php.ini`.
+   - Add or ensure this line exists: `extension=imagick`.
+
+
 ## PDF Generation
 This project uses the **Snappy PDF** package in Laravel for features requiring PDF generation (e.g., downloading audits). Snappy is a wrapper around `wkhtmltopdf`, which converts HTML to PDF.
 

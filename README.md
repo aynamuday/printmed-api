@@ -107,7 +107,11 @@ To configure:
 To integrate production-ready email APIs, you can use providers like SendGrid and Mailgun.
 
 
-## Facial Recognition
+<!--## Facial Recognition
+Amazon Rekognition was utilized to integrate facial recognition, in features like verifying identity and preventing duplicate patient record.
+
+For basic implementation:
+1. **Create an AWS Account**-->
 
 
 ## QR Code Generation

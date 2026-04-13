@@ -154,7 +154,7 @@ Download [wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) and install. Ensu
 
 For additional details, visit the [official documentation](https://github.com/barryvdh/laravel-snappy) of Snappy PDF.
 
-## Real-time Functionality
+<!--## Real-time Functionality
 
 This project utilizes Pusher to enable real-time updates (e.g., patient registration and vital signs).
 
@@ -174,7 +174,7 @@ This project utilizes Pusher to enable real-time updates (e.g., patient registra
    ```
 3. **Configure Echo (React)**
    - Go to `printmed\src\utils\pusher\echo.js`.
-   - Change the value of `key` to your Pusher App Key.
+   - Change the value of `key` to your Pusher App Key.-->
 
 
 ## Troubleshooting

@@ -1,22 +1,17 @@
-<!-- <p align="center">
-  <img src="assets/display.png" alt="" width="80%">
-</p> -->
+<p align="center">
+  <img src="display.png" alt="" width="80%">
+</p>
 
-<!-- # PrintMed
-This is a
 
-The system uses:
-- fcx
+**PrintMed: Patient Records Management System** is a full-stack web application built using Laravel and React, designed to streamline outpatient healthcare workflows.
 
-## Features
-**For Physicians**
-- fd
-
-**For Patients**
-- fd
-  
-**For Admins**
-- fd-->
+## Key Features
+- **Patient Online Registration.** Allows patients to register online before hospital visits, to reduce queue congestion.
+- **QR Code-Based Identification.** Enables fast patient record access via QR code scanning.
+- **Facial Verification.** Integrates facial recognition for verifying patient identity.
+- **Prevention of Duplicate Patient.** Notifies for matching records based on first name, last name, birthdate, and sex; as well as facial recognition.
+- **Security & Access Control.** Implements role-based access control (RBAC), two-factor authentication (2FA), and encryption of sensitive patient data at rest.
+- **Audit System.** Tracks and logs user actions to ensure transparency and accountability.
 
 
 ## Prerequisites

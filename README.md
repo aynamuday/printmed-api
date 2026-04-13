@@ -107,11 +107,26 @@ To configure:
 To integrate production-ready email APIs, you can use providers like SendGrid and Mailgun.
 
 
-<!--## Facial Recognition
+## Facial Recognition
 Amazon Rekognition was utilized to integrate facial recognition, in features like verifying identity and preventing duplicate patient record.
 
 For basic implementation:
-1. **Create an AWS Account**-->
+1. **Sign up for an AWS Account [here](https://signin.aws.amazon.com/signup?request_type=register)**
+2. **Open the [IAM Console](https://console.aws.amazon.com/iam/). In the navigation pane, *choose Users*.**
+3. **Create a user with Amazon Rekognition administrative access**
+4. **Under its security credentials tab, choose Create Access Key**
+5. **Configure `.env` (Laravel)**
+   
+   ```bash
+   AWS_ACCESS_KEY_ID=your_access_key_id
+   AWS_SECRET_ACCESS_KEY=you_secret_access_key
+   AWS_DEFAULT_REGION=your_aws_region
+   ```
+7. **Create the Collection**
+   - Open Postman (install if you don't have)
+   - Send a POST request to http://127.0.0.1:8000/api/create-collection
+
+For additional information, visit the Amazon Rekognition [official documentation](https://docs.aws.amazon.com/rekognition/latest/dg/getting-started.html).
 
 
 ## QR Code Generation
@@ -119,17 +134,22 @@ This project uses the package `simplesoftwareio/simple-qrcode` for QR Code gener
 
 Instruction:
 1. **Check your PHP setup thru terminal**
+   
    ```bash
    php -v
    ```
    Take note of PHP version, Thread Safety, and Architecture.
-2. **Download [imagick](https://pecl.php.net/package/imagick) that matches your PHP setup**
-3. **Extract the ZIP**
-4. **Copy `php_imagick.dll` to `\php\ext\` folder**
-5. **Copy the other `.dll` files to `\php\` folder**
-6. **Enable the extension in php.ini**
+3. **Download [imagick](https://pecl.php.net/package/imagick) that matches your PHP setup**
+4. **Extract the ZIP**
+5. **Copy `php_imagick.dll` to `\php\ext\` folder**
+6. **Copy the other `.dll` files to `\php\` folder**
+7. **Enable the extension in php.ini**
    - Open `php.ini`.
-   - Add or ensure this line exists: `extension=imagick`.
+   - Add or ensure this line exists:
+     
+     ```bash
+     extension=imagick
+     ```
 
 
 ## PDF Generation
@@ -163,20 +183,33 @@ This project utilizes Pusher to enable real-time updates (e.g., patient registra
 
 
 ## Troubleshooting
-### MySQL Connection Refused ###
+### I.  MySQL Connection Refused ###
 ```
 SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
 ```
 This is likely because the MySQL Server is not running. 
 
 **Solution:**
-1. Open Windows Run (`Win + R`)
-2. Type:
+1. **Open Windows Run (`Win + R`)**
+2. **Type:**
 
    ```
    services.msc
    ```
-4. Find `MySQL80` (or similar, e.g. `MySQL`)
-5. Right-click → **Start**
-6. Set **Startup type** to ` Automatic `
-4. Click **Apply**
+4. **Find `MySQL80` (or similar, e.g. `MySQL`)**
+5. **Right-click → *Start***
+6. **Right-click → *Properties***
+7. **Set *Startup type* to ` Automatic `**
+4. **Click *Apply***
+
+### II.  Missing Script "dev"
+```
+npm error Missing script: "dev"
+```
+This is likely because of wrong directory in running the frontend server. Unintentionally, the default directory is `\printmed-frontend`. To solve this error, you must simply change directory to `\printmed-frontend\printmed`. 
+
+In your React terminal, execute:
+
+```bash
+cd printmed
+```

@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <div class="logo-container">
-            <img class="logo" src="https://firebasestorage.googleapis.com/v0/b/souschef-2024.firebasestorage.app/o/carmona_hospital_logo_1.png?alt=media&token=b6b2a182-f2a8-4000-9b0d-ce3b050a26c4" alt="">
+            <img class="logo" src="https://firebasestorage.googleapis.com/v0/b/souschef-2026.firebasestorage.app/o/carmona_hospital_logo.png?alt=media&token=6a471998-274d-440e-8d17-09c32b7e1f74" alt="">
         </div>
         @if ($isVerifyEmail)
             <h3>Verify Your Email</h3>
